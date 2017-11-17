@@ -25,3 +25,13 @@
 
 // app.listen(3000);
 //-------------------------------------------
+
+function myClosure() {
+    var date = new Date();
+    return function() {
+        return date.getMilliseconds();
+    }
+};
+var closure = myClosure();
+console.log(closure()); //same value
+console.log(closure()); //same value
